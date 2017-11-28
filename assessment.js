@@ -1,26 +1,41 @@
 // #1 create a variable called 'myName' and assign it to your name as a string.
-
-// CODE HERE
+var myName = "Brandon Allred "
 
 // #2 create a variable called 'iLoveCode' and assign it the value of 'myName' + loves code as a string.
 
-// CODE HERE
+var iLoveCode = myName + "loves to code."
 
 // ARROW FUNCTIONS
-// #3 using the arrow syntax, create a function called 'wildNameReturn' that takes in variable as a parameter. Return the variable inside of the function with the word 'wild' in front so it returns "wild Bryan" and then invoke wildNameReturn using the 'myName' variable you created as an argument.
+// #3 using the arrow syntax, create a function called 'wildNameReturn' that takes in variable as a parameter.
+//Return the variable inside of the function with the word 'wild' in front so it returns "wild Bryan" and then
+//invoke wildNameReturn using the 'myName' variable you created as an argument.
 
-// CODE HERE
+var wildNameReturn = (myName) => {
+  return "wild "+myName
+};
+wildNameReturn("Bryan");
 
 // #4 using the arrow syntax, create a function called 'sum' that takes in a number and returns that number added to itself.
 
-// CODE HERE
+var sum = (num) => {
+  return num+=num;
+};
 
-// #5 using the arrow syntax, create a function called 'greeter' that takes in two parameters, name & age. greeter should return a string like this "Hi, I'm Bryan and I am 27 years old." but replacing the name and age with the passed in values. The test on this question is very strict on casing and punctuation.
+// #5 using the arrow syntax, create a function called 'greeter' that takes in two parameters, name & age.
+//greeter should return a string like this "Hi, I'm Bryan and I am 27 years old." but replacing the name and age
+// with the passed in values. The test on this question is very strict on casing and punctuation.
 
-// CODE HERE
+var greeter = (name,age) => {
+  return "Hi, Im " + name + " and I am " + age + " years old."
+};
 
-// #6 using the arrow syntax, create a function called 'animalSounds'. animalSound takes three parameters: name, sound and a callback. animalSound should return something like this "I am wild Bryan. Hear me woof." when invoked using the wildNameReturn function you previously created as the callback.
-// CODE HERE
+// #6 using the arrow syntax, create a function called 'animalSounds'. animalSound takes three parameters: name, sound and a callback.
+//animalSound should return something like this "I am wild Bryan. Hear me woof." when invoked using the wildNameReturn function you
+//previously created as the callback.
+
+var animalSounds (name, sound, cb) => {
+  
+};
 
 // CALLBACKS
 // Here we will write a function that takes in a callback as a parameter. You must write the callback function to make the existing function work properly.
