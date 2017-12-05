@@ -34,9 +34,9 @@ var greeter = (name,age) => {
 //previously created as the callback.
 
 var animalSounds (name, sound, cb) => {
-  
+  return cb("I am "+ name + ". Hear me " + sound);
 };
-
+wildNameReturn(animalSounds);
 // CALLBACKS
 // Here we will write a function that takes in a callback as a parameter. You must write the callback function to make the existing function work properly.
 // EXAMPLE
@@ -103,6 +103,7 @@ var shortNames // CODE HERE
 var nickNameMaker = (name) => {
   return name.split('').slice(0,2).join('') + name.split('').slice(0,2).join('');
 }
+
 
 var shorty // CODE HERE
 
