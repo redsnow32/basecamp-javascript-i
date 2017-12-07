@@ -36,6 +36,7 @@ var greeter = (name,age) => {
 var animalSounds = (name, sound, cb) => {
   return (("I am ")+ cb(name)+ (". Hear me " + sound + "."));
 };
+
 animalSounds("Brandon", "Bark", wildNameReturn)
 // CALLBACKS
 // Here we will write a function that takes in a callback as a parameter. You must write the callback function to make the existing function work properly.
@@ -88,12 +89,11 @@ last(names, lastName =>{
 // #10 using the arrow syntax, write a function called 'sizer' that returns the larger of two numbers that are passed in using a callback function.
 
 var sizer = (num1,num2,cb) => {
-  if(num1>num2===true) {
-    return num1;
-  } else if(num1<num2===true) {
-    return num2;
+  if(num1 > num2) {
+    return cb(num1);
+  } else if(num1 < num2) {
+    return cb(num2);
   }
-  return cb(num1,num2,bigger)
 }
 
 sizer(300, 33, bigger => {
@@ -120,9 +120,12 @@ var nickNameMaker = (name) => {
   return name.split('').slice(0,2).join('') + name.split('').slice(0,2).join('');
 }
 
-//
-// var shorty = [];
-//   friends.map (friends => nickNameMaker
+var shorty = [];
+friends.map(function(friend) {
+  var shortName = nickNameMaker(friend)
+  return shorty.push(shortName);
+})
+
 
 // #14 assign 'evens' the return value of even numbers from the numbers array
 var numbers = [1, 25, 6, 88, 47, 77, 333, 500];
@@ -130,16 +133,17 @@ var numbers = [1, 25, 6, 88, 47, 77, 333, 500];
 var evens = numbers.filter(function(val,i,arr) {
   return val%2===0;
 });
-console.log(evens(numbers))
+console.log(evens)
 
 // #15 using the previously created numbers array, map over each number and add 3 to it and assign it to 'plusThree'.
 
-
+var plusThree = numbers.map(num => num + 3);
+console.log(plusThree);
 
 // #15 using the 'goodPeople' array of objects, add a new key value pair of 'family: true' to each object. Hint: use forEach
 var goodPeople = [{name: 'George'}, {name: 'Randi'}, {name: 'Lindsey'}]
 
 goodPeople.forEach(function(goodPeople) {
-  return goodPeople.push(goodPeople.family = true;)
+  return goodPeople.family = true ;
 })
 console.log(goodPeople);
